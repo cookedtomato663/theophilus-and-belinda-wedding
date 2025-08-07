@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Celebration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Custom styles to integrate the fonts and theme */
+        body {
+            font-family: 'Lora', serif;
+            background-color: #FDF8F2;
+            /* A warm, creamy off-white */
+            color: #442C2E;
+            /* Coffee Brown */
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        .script-font {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .theme-burnt-orange {
+            color: #C05621;
+            /* Burnt Orange */
+        }
+
+        .bg-theme-burnt-orange {
+            background-color: #C05621;
+        }
+
+        .theme-coffee-brown {
+            color: #442C2E;
+        }
+
+        .bg-theme-coffee-brown {
+            background-color: #442C2E;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 2px;
+            background-color: #E5A17F;
+            /* Lighter burnt orange for accents */
+            margin: 2rem auto;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Slightly transparent white */
+            backdrop-filter: blur(5px);
+            /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .list-item {
+            border-bottom: 1px solid #F3E9DD;
+            padding: 0.75rem 0;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #442C2E;
+        }
+
+        .list-subtitle {
+            font-size: 0.9rem;
+            color: #856A64;
+        }
+
+        /* Styles for the floral background elements */
+        .floral-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            /* Allows clicking through the background */
+            z-index: 0;
+        }
+
+        .floral-background svg {
+            position: absolute;
+            opacity: 0.5;
+            filter: blur(1px);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Floral Background Elements -->
+    <div class="floral-background">
+        <!-- Flower 1: Top Left - Large delicate flower -->
+        <svg class="flower" style="top: -80px; left: -100px; width: 350px; transform: rotate(-25deg); opacity: 0.15;"
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#C05621">
+                <!-- 5 petals arranged in circle -->
+                <ellipse cx="100" cy="60" rx="25" ry="45" transform="rotate(0 100 100)" />
+                <ellipse cx="100" cy="60" rx="25" ry="45" transform="rotate(72 100 100)" />
+                <ellipse cx="100" cy="60" rx="25" ry="45" transform="rotate(144 100 100)" />
+                <ellipse cx="100" cy="60" rx="25" ry="45" transform="rotate(216 100 100)" />
+                <ellipse cx="100" cy="60" rx="25" ry="45" transform="rotate(288 100 100)" />
+                <!-- Center -->
+                <circle cx="100" cy="100" r="8" fill="#442C2E" />
+            </g>
+        </svg>
+
+        <!-- Flower 2: Bottom Right - Large flowing flower -->
+        <svg class="flower"
+            style="bottom: -150px; right: -180px; width: 600px; transform: rotate(15deg); opacity: 0.12;"
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#E5A17F">
+                <!-- 6 petals for variety -->
+                <ellipse cx="100" cy="65" rx="20" ry="40" transform="rotate(0 100 100)" />
+                <ellipse cx="100" cy="65" rx="20" ry="40" transform="rotate(60 100 100)" />
+                <ellipse cx="100" cy="65" rx="20" ry="40" transform="rotate(120 100 100)" />
+                <ellipse cx="100" cy="65" rx="20" ry="40" transform="rotate(180 100 100)" />
+                <ellipse cx="100" cy="65" rx="20" ry="40" transform="rotate(240 100 100)" />
+                <ellipse cx="100" cy="65" rx="20" ry="40" transform="rotate(300 100 100)" />
+                <!-- Center -->
+                <circle cx="100" cy="100" r="12" fill="#C05621" />
+            </g>
+        </svg>
+
+        <!-- Flower 3: Mid Right - Simple 4-petal flower -->
+        <svg class="flower" style="top: 25%; right: -150px; width: 400px; transform: rotate(45deg); opacity: 0.1;"
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#442C2E">
+                <!-- 4 petals in cross pattern -->
+                <ellipse cx="100" cy="70" rx="18" ry="35" transform="rotate(0 100 100)" />
+                <ellipse cx="100" cy="70" rx="18" ry="35" transform="rotate(90 100 100)" />
+                <ellipse cx="100" cy="70" rx="18" ry="35" transform="rotate(180 100 100)" />
+                <ellipse cx="100" cy="70" rx="18" ry="35" transform="rotate(270 100 100)" />
+                <!-- Center -->
+                <circle cx="100" cy="100" r="6" fill="#E5A17F" />
+            </g>
+        </svg>
+
+        <!-- Additional small flowers for more coverage -->
+        <!-- Flower 4: Top Right - Small accent -->
+        <svg class="flower" style="top: 10%; right: 15%; width: 180px; transform: rotate(-15deg); opacity: 0.08;"
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#E5A17F">
+                <ellipse cx="100" cy="75" rx="15" ry="30" transform="rotate(0 100 100)" />
+                <ellipse cx="100" cy="75" rx="15" ry="30" transform="rotate(72 100 100)" />
+                <ellipse cx="100" cy="75" rx="15" ry="30" transform="rotate(144 100 100)" />
+                <ellipse cx="100" cy="75" rx="15" ry="30" transform="rotate(216 100 100)" />
+                <ellipse cx="100" cy="75" rx="15" ry="30" transform="rotate(288 100 100)" />
+                <circle cx="100" cy="100" r="5" fill="#C05621" />
+            </g>
+        </svg>
+
+        <!-- Flower 5: Bottom Left - Medium accent -->
+        <svg class="flower" style="bottom: 20%; left: 10%; width: 250px; transform: rotate(30deg); opacity: 0.09;"
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#C05621">
+                <ellipse cx="100" cy="70" rx="20" ry="35" transform="rotate(0 100 100)" />
+                <ellipse cx="100" cy="70" rx="20" ry="35" transform="rotate(60 100 100)" />
+                <ellipse cx="100" cy="70" rx="20" ry="35" transform="rotate(120 100 100)" />
+                <ellipse cx="100" cy="70" rx="20" ry="35" transform="rotate(180 100 100)" />
+                <ellipse cx="100" cy="70" rx="20" ry="35" transform="rotate(240 100 100)" />
+                <ellipse cx="100" cy="70" rx="20" ry="35" transform="rotate(300 100 100)" />
+                <circle cx="100" cy="100" r="7" fill="#442C2E" />
+            </g>
+        </svg>
+
+        <!-- Flower 6: Mid Left - Small delicate -->
+        <svg class="flower" style="top: 45%; left: -80px; width: 200px; transform: rotate(-45deg); opacity: 0.06;"
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#E5A17F">
+                <ellipse cx="100" cy="80" rx="12" ry="25" transform="rotate(0 100 100)" />
+                <ellipse cx="100" cy="80" rx="12" ry="25" transform="rotate(90 100 100)" />
+                <ellipse cx="100" cy="80" rx="12" ry="25" transform="rotate(180 100 100)" />
+                <ellipse cx="100" cy="80" rx="12" ry="25" transform="rotate(270 100 100)" />
+                <circle cx="100" cy="100" r="4" fill="#442C2E" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 sm:p-8 max-w-4xl relative z-10">
+
+        <!-- Header -->
+        <header class="text-center py-12">
+            <h1 class="text-6xl md:text-8xl theme-burnt-orange">Celebrating</h1>
+            <p class="text-3xl md:text-5xl script-font theme-coffee-brown mt-2">The Wedding Of</p>
+            <p class="text-2xl md:text-4xl font-bold tracking-widest uppercase theme-coffee-brown mt-8">Groom & Bride
+            </p>
+            <p class="text-lg theme-burnt-orange mt-2">DATE OF WEDDING</p>
+        </header>
+
+        <div class="section-divider"></div>
+
+        <!-- Order of Service Section -->
+        <section id="order-of-service" class="text-center">
+            <h2 class="text-5xl theme-burnt-orange mb-8">Order of Service</h2>
+            <div class="card text-left">
+                <ul class="divide-y divide-orange-100">
+                    <li class="p-4">1. Arrival of Guests & Music Interlude</li>
+                    <li class="p-4">2. Arrival of Groom</li>
+                    <li class="p-4">3. Opening Prayer</li>
+                    <li class="p-4">4. Praise & Worship</li>
+                    <li class="p-4">5. Song Ministration <span class="text-sm text-gray-500 block">(Agape
+                            Worshippers)</span></li>
+                    <li class="p-4">6. Procession of Bride</li>
+                    <li class="p-4">7. Exchange of Vows</li>
+                    <li class="p-4">8. Marriage Blessing</li>
+                    <li class="p-4">9. Love Offertory for Couples</li>
+                    <li class="p-4">10. Exhortation</li>
+                    <li class="p-4">11. Presentation of Certificates</li>
+                    <li class="p-4">12. Closing Prayer</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Reception Section -->
+        <section id="reception" class="text-center">
+            <h2 class="text-5xl theme-burnt-orange mb-8">Reception</h2>
+            <div class="card text-left">
+                <ul class="divide-y divide-orange-100">
+                    <li class="p-4">Music Interlude</li>
+                    <li class="p-4">Acknowledgment of Dignitaries</li>
+                    <li class="p-4">Couple's First Dance</li>
+                    <li class="p-4">Cutting of the Cake</li>
+                    <li class="p-4">Team Bride & Groom Dance</li>
+                    <li class="p-4">Popping of Champagne</li>
+                    <li class="p-4">Proposal of Toast</li>
+                    <li class="p-4">Couple Opens the Dance Floor</li>
+                    <li class="p-4">Presentation of Gifts</li>
+                    <li class="p-4">Vote of Thanks <span class="text-sm text-gray-500 block">(Nadia Imani)</span></li>
+                    <li class="p-4">Closing Prayer <span class="text-sm text-gray-500 block">(Rebecca Apprey)</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Wedding Officials Section -->
+        <section id="officials" class="text-center">
+            <h2 class="text-5xl theme-burnt-orange mb-8">Wedding Party</h2>
+            <div class="card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Best Man & Lady of Honour -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <p class="list-title">Best Man</p>
+                        <p class="list-subtitle">Emmanuel Tawiah</p>
+                    </div>
+                    <div>
+                        <p class="list-title">Lady of Honour</p>
+                        <p class="list-subtitle">Abigail Serwa Asare</p>
+                    </div>
+                </div>
+                <!-- Groomsmen/Lady -->
+                <div>
+                    <p class="list-title">Groomsmen & Lady</p>
+                    <p class="list-subtitle">Angela Aidoo</p>
+                    <p class="list-subtitle">Samuel Owusu</p>
+                    <p class="list-subtitle">Amoah Sarfo Kwadwo</p>
+                </div>
+                <!-- Bridesmaids -->
+                <div>
+                    <p class="list-title">Bridesmaids</p>
+                    <p class="list-subtitle">Hannah Frimpong</p>
+                    <p class="list-subtitle">Sandra Otoo Pratt</p>
+                    <p class="list-subtitle">Agnes Amofa</p>
+                </div>
+                <!-- MC -->
+                <div>
+                    <p class="list-title">Master of Ceremonies</p>
+                    <p class="list-subtitle">Solomon Ackom</p>
+                </div>
+                <!-- Custodian of Gifts -->
+                <div>
+                    <p class="list-title">Custodian of Gifts</p>
+                    <p class="list-subtitle">Vicentia Nakie Wayoe</p>
+                    <p class="list-subtitle">Leticia Darko</p>
+                </div>
+                <!-- Ushers -->
+                <div>
+                    <p class="list-title">Ushers</p>
+                    <p class="list-subtitle">Patricia Adjagblah</p>
+                    <p class="list-subtitle">Grace Ofosua</p>
+                    <p class="list-subtitle">Rose Ankrah</p>
+                    <p class="list-subtitle">Abigail Amponsah</p>
+                    <p class="list-subtitle">Elizabeth Asare</p>
+                </div>
+                <!-- Protocol -->
+                <div>
+                    <p class="list-title">Protocol</p>
+                    <p class="list-subtitle">Ernest Frimpong</p>
+                    <p class="list-subtitle">Mr. Thomas Afrawuah</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Photography Order Section -->
+        <section id="photography" class="text-center">
+            <h2 class="text-5xl theme-burnt-orange mb-8">Order of Photography</h2>
+            <div class="card text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">
+                    <p>Officiating ministers</p>
+                    <p>Bride’s Parents</p>
+                    <p>Groom’s Parents</p>
+                    <p>Both Parents</p>
+                    <p>Bride’s Family</p>
+                    <p>Groom’s Family</p>
+                    <p>Both families & Relatives</p>
+                    <p>Bride’s Siblings</p>
+                    <p>Groom’s Siblings</p>
+                    <p>Groomsmen</p>
+                    <p>Bridal Team</p>
+                    <p>Christ-Life Avenue Church</p>
+                    <p>Praise Cell</p>
+                    <p>Agape Cell</p>
+                    <p>Staff of Fidelity Bank</p>
+                    <p>Staff & Associates of Advance Healthcare</p>
+                    <p>UCC Alumnus</p>
+                    <p>Friends of Bride</p>
+                    <p>Friends of Groom</p>
+                    <p>Ushering Team</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Officiating Ministers & Vendors -->
+        <footer class="text-center pt-8 pb-12">
+            <h2 class="text-5xl theme-burnt-orange mb-8">With Gratitude</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Officiating Ministers -->
+                <div class="text-left">
+                    <h3 class="text-2xl font-bold theme-coffee-brown mb-4">Officiating Ministers</h3>
+                    <p>Rev Isaac Love Pappoe</p>
+                    <p>Ps Moses Anane</p>
+                    <p>Ps Nana Adjei Sikapa</p>
+                    <p>Ps Benjamin Osae-Biney</p>
+                </div>
+                <!-- Vendors -->
+                <div class="text-left">
+                    <h3 class="text-2xl font-bold theme-coffee-brown mb-4">Our Amazing Vendors</h3>
+                    <p><strong>Décor:</strong> @dnellzeventsgh</p>
+                    <p><strong>Photography:</strong> @istudio_photography_</p>
+                    <p><strong>Video:</strong> @Iamphotography</p>
+                    <p><strong>Makeup:</strong> @sugar_makeover_official</p>
+                    <p><strong>Hairstyling:</strong> @TouchbyAbi</p>
+                    <p><strong>Wedding Gown:</strong> @Mamel’s stitches</p>
+                    <p><strong>Kente Gown:</strong> @Mamel’s stitches</p>
+                    <p><strong>Bride’s Reception costume:</strong> @Top stitched by Aseda</p>
+                    <p><strong>Groom’s Kaftan:</strong> @OPTIUS CLOTHING</p>
+                    <p><strong>Groom’s Suit:</strong> @williesfashion_gh</p>
+                    <p><strong>Cake:</strong> @ElsaBakeshopGh</p>
+                    <p><strong>Catering:</strong> @BigShiloh catering</p>
+                    <p><strong>Local bar:</strong> @Tiorkors local bar</p>
+                    <p><strong>Music /DJ:</strong> BLINKY</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
